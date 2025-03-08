@@ -7,7 +7,7 @@ import seaborn as sns
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv(r"C:\Users\DELL\wppool\wppool\data.csv")
+    data = pd.read_csv(r"data.csv")
     data["install_date"] = pd.to_datetime(data["install_date"])
     data["active_users"] = (data["days_active"] > 0).astype(int)
     data["churned_users"] = data["churned"].astype(int)
